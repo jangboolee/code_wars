@@ -1,5 +1,5 @@
-import re
+from re import findall
 
 def count_smileys(arr):
     
-    return len(re.findall(r"[:;][-~]?[)D]", "".join(arr)))
+    return len(findall(r"[:;][-~]?[)D]", "".join(arr)))

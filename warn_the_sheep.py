@@ -1,11 +1,17 @@
-def warn_the_sheep(queue):
+def warn_the_sheep(queue: list) -> str:
 
+    # If wolf is the closest animal
     if queue[-1] == "wolf":
         return "Pls go away and stop eating my sheep"
+    # If the wolf is somewhere in the queue
     else:
+        # Loop through the queue while tracking the index
         for i, animal in enumerate(queue):
+            # Stop when the wolf is found
             if animal == "wolf":
+                # Calculate position of the sheep in danger
                 sheep_position = len(queue) - i - 1
+                # Return warning message
                 return f"Oi! Sheep number {sheep_position}! " \
                        f"You are about to be eaten by a wolf!"
 

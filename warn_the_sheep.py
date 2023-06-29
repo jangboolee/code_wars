@@ -1,4 +1,15 @@
 def warn_the_sheep(queue: list) -> str:
+    """Warn the nearest sheep of a nearby wolf in a queue
+
+    Args:
+        queue (list): List of animals, including sheep and one wolf.
+            The head of the queue is at the right-most end of the list.
+
+    Returns:
+        str: A warning message to the wolf if the wolf is the closest animal,
+            and a warning message to the nearest sheep if the wolf is hidden
+            in the queue
+    """
 
     # If wolf is the closest animal
     if queue[-1] == "wolf":
